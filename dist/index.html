@@ -12,11 +12,40 @@
         </div>
         <div class="body">
             <div class="sidebar">
-                <button id="tasksHeader">All Tasks</button>
-                <button id="projectsHeader">Projects</button>
+                <ul>
+                    <li><button id="thisWeek">Week</button></li>
+                    <li><button id="thisMonth">Month</button></li>
+                   <li><button id="allTasks">All Tasks</button></li>
+                    <li><div id="projectsHeader">Projects</div></li>
+                    <li><button class="project">Gym</button></li>
+                    <li><button class="project">Chess</button></li>
+                </ul>
+                <button id="addProject">Add Project</button>
             </div>
             <div class="content">
-                <p>Hello World! This is a test paragraph.</p>
+                <div class="taskList">
+                    <div class="task">Feed the dog.</div>
+                </div>
+                <button data-modal-target="#modal" id="addTask">Add Task</button>
+                <div class="modal" id="modal">
+                    <div class="modal-header">
+                        <div class="title">Add Task</div>
+                    </div>
+                    <div class="modal-body">
+                        <div>Book Title</div>
+                        <input id="bookTitle" class="textfield">
+                        <div>Author</div>
+                        <input id="bookAuthor" class="textfield">
+                        <div>Number of Pages</div>
+                        <input id="bookPages" type="number" min="1" max="1000" class="textfield">
+                        <div>Have you read it?</div>
+                        <button id="bookRead">Yes</button>
+                        <button id="bookNotRead">No</button>
+                        <button id="confirm">Confirm and Add Book</button>
+                        <button data-close-button class="close-button">Cancel</button>
+                    </div>
+                </div>
+                <div id="overlay"></div>    
             </div>
         </div>
     </body>
