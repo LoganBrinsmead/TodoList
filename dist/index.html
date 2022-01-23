@@ -23,25 +23,31 @@
                 <button id="addProject">Add Project</button>
             </div>
             <div class="content">
-                <div class="taskList">
-                    <div class="task">Feed the dog.</div>
-                </div>
+                <ul class="taskList">
+                    <li class="task">
+                        <input type="checkbox" class="complete">
+                        <div class="taskName">Feed the dog.</div>
+                        <button class="editTask">Edit</button>
+                        <button class="deleteTask">Delete</button>
+                    </li>
+                </ul>
                 <button data-modal-target="#modal" id="addTask">Add Task</button>
                 <div class="modal" id="modal">
                     <div class="modal-header">
                         <div class="title">Add Task</div>
                     </div>
                     <div class="modal-body">
-                        <div>Book Title</div>
-                        <input id="bookTitle" class="textfield">
-                        <div>Author</div>
-                        <input id="bookAuthor" class="textfield">
-                        <div>Number of Pages</div>
-                        <input id="bookPages" type="number" min="1" max="1000" class="textfield">
-                        <div>Have you read it?</div>
-                        <button id="bookRead">Yes</button>
-                        <button id="bookNotRead">No</button>
-                        <button id="confirm">Confirm and Add Book</button>
+                        <div>Task Title</div>
+                        <input id="taskTitle" class="textfield">
+                        <div>Task Description</div>
+                        <input id="taskDescription" class="textfield">
+                        <div>Due Date:</div>
+                        <input type="date" min="2020-01-01" id="dueDate">
+                        <div>Priority:</div>
+                        <button id="lowPriority" class="priority">LOW</button>
+                        <button id="mediumPriority" class="priority">MEDIUM</button>
+                        <button id="highPriority" class="priority">HIGH</button>
+                        <button data-close-button class="close-button" id="confirm">Confirm and Create Task</button>
                         <button data-close-button class="close-button">Cancel</button>
                     </div>
                 </div>

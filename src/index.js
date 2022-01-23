@@ -56,13 +56,19 @@ function clearDOM(selector) {
 
 // factory function for creating task in the DOM
 // takes necessary info from the task factory function
-function createTask() {
-    // when this function is called, create a new function using the task factory function
-    const newTask = task(title, dueDate, priority, description);
+function createTaskObj() {
+        const _taskTitleInput = document.getElementById('taskTitle');
+        const _dueDateInput = document.getElementById('dueDate');
+        const _description = document.getElementById('taskDescription');
 
-    const taskDiv = document.createElement('div');
-    taskDiv.classList.add('task');
-    
+        return newTask;
+}
+
+function taskDOM(obj) {
+        // create a task list item in memory
+        const task = document.createElement('li');
+
+         
 }
 
 function date() {
@@ -71,6 +77,22 @@ function date() {
 
     return date;
 }
+
+let _priority;
+function clickEvent(index) {return _priority = index};
+document.querySelectorAll('.priority').forEach(function(button, index) {
+        button.addEventListener('click', clickEvent.bind(null, index));   
+});
+document.getElementById('confirm').addEventListener('click', () => {
+        const newTask = task(
+                _taskTitleInput.value,
+                _dueDateInput.value,
+                _priority,
+                _description.value
+        );
+        return newTask;
+});
+
 
 // factory function to create the To-Do objects
 const task = (title, dueDate, priority, description) => {
@@ -82,3 +104,4 @@ const task = (title, dueDate, priority, description) => {
     };
 };
 
+createTask();

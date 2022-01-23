@@ -137,5 +137,14 @@ button#addTask:hover {
 }
 
 .task {
+    display: flex;
+
+    /* temp */
+    border: solid black 1px;
+    border-radius: 20px;
+    justify-content: space-around;
+    width: 100vh;
+    /* temp */
+    
     font-size: 32px;
 }

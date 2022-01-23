@@ -46,7 +46,7 @@ function closeModal(modal) {
 
 // function to clear the DOM 
 function clearDOM(selector) {
-    const content = document.querySelector(`'${selector}'`);
+    const content = document.querySelector(`${selector}`);
     while (content.firstChild) {
         content.removeChild(content.lastChild);
     }
